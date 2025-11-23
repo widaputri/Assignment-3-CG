@@ -155,7 +155,7 @@ static bool scene_hit(const Scene* scene, const Ray* ray, float t_min, float t_m
 Vec3 trace_ray(const Scene* scene, const Ray* ray, RNG* rng,
                uint32_t depth, uint32_t max_depth) {
     // Russian roulette termination after certain depth
-    const uint32_t RUSSIAN_ROULETTE_DEPTH = 3;
+    const uint32_t RUSSIAN_ROULETTE_DEPTH = 5;
     
     if (depth >= max_depth) {
         return vec3_create(0, 0, 0);
